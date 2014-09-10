@@ -1,0 +1,6 @@
+/bin/
+/obj/
+
+*.suo
+
+/ExcelTests_TemporaryKey.pfx
