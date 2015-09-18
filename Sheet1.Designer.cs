@@ -17,6 +17,8 @@ namespace ExcelTests {
     [global::System.Security.Permissions.PermissionSetAttribute(global::System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
     public sealed partial class Sheet1 : Microsoft.Office.Tools.Excel.WorksheetBase {
         
+        internal Microsoft.Office.Tools.Excel.ListObject 表1;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
@@ -118,6 +120,7 @@ namespace ExcelTests {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void BeginInitialization() {
             this.BeginInit();
+            this.表1.BeginInit();
         }
         
         /// 
@@ -125,6 +128,7 @@ namespace ExcelTests {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.表1.EndInit();
             this.EndInit();
         }
         
@@ -133,6 +137,7 @@ namespace ExcelTests {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void InitializeControls() {
+            this.表1 = Globals.Factory.CreateListObject(null, null, "Sheet1:表1", "表1", this);
             this.button1 = new Microsoft.Office.Tools.Excel.Controls.Button(Globals.Factory, this.ItemProvider, this.HostContext, "179DD1E7610EF414D781A5071D20E8C62E6DF1", "179DD1E7610EF414D781A5071D20E8C62E6DF1", this, "button1");
             this.webBrowser1 = new Microsoft.Office.Tools.Excel.Controls.WebBrowser(Globals.Factory, this.ItemProvider, this.HostContext, "21164C8CC2F3702421B2B7482D4E4717F77052", "21164C8CC2F3702421B2B7482D4E4717F77052", this, "webBrowser1");
         }
@@ -155,6 +160,10 @@ namespace ExcelTests {
             // 
             this.webBrowser1.Name = "webBrowser1";
             // 
+            // 表1
+            // 
+            this.表1.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // Sheet1
             // 
             this.button1.BindingContext = this.BindingContext;
@@ -166,6 +175,15 @@ namespace ExcelTests {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         private bool NeedsFill(string MemberName) {
             return this.DataHost.NeedsFill(this, MemberName);
+        }
+        
+        /// 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        protected override void OnShutdown() {
+            this.表1.Dispose();
+            base.OnShutdown();
         }
     }
     
